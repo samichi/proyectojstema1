@@ -270,7 +270,7 @@ function mostrarInformacionExcursion(indexArray){
       $( '#tituloExcursion' ).append(arrayListaExcursiones[item].titulo);
 	     //<iframe class="video v1" width="560" height="315" src="https://youtu.be/A2YdbncJoPc" frameborder="0" allowfullscreen=""></iframe>
       //$('#videoExcursionCargar').html('<source src="'+ arrayListaExcursiones[item].urlVideo +'" type="video/mp4"></source>' );
-      $('#videoExcursionCargar').html('<iframe class="video v1" width="560" height="315" src="'+ arrayListaExcursiones[item].urlVideo +'" frameborder="0" allowfullscreen=""></iframe>' );
+      $('#videoExcursionCargar').html('<iframe src="'+ arrayListaExcursiones[item].urlVideo +'"></iframe>' );
       document.getElementById('videoExcursionCargar').load();
       // console.log($('#videoExcursionCargar'));
       // $('#videoExcursionCargar').play();
