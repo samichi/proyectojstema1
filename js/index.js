@@ -765,38 +765,13 @@ window.onload = function () {
 
 //Funciones del Video
 $(function() {
-			
+// Init
+$('.video').video();
+$('.play').click(function(e) {
+e.preventDefault();
+console.log("sdfdf");
 
-				// Init
-				$('.video').video();
-
-				// Add controls
-				$('.play').click(function(e) {
-					e.preventDefault();
-					console.log("sdfdf");
-
-					$('.video').playVideo();
-				});
-
-				$('.pause').click(function(e) {
-					e.preventDefault();
-
-					$('.video').pauseVideo();
-				});
-
-				$('.stop').click(function(e) {
-					e.preventDefault();
-
-					$('.video').stopVideo();
-				});
-
-				$('.restart').click(function(e) {
-					e.preventDefault();
-
-					$('.video').restartVideo();
-				});
-                
-           
-				
-			});
+$('.video').playVideo();
+});
+ });
 
