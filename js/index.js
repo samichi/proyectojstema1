@@ -413,7 +413,7 @@ function compararRespuestaUsuarioActividad(imgUrlRespUsuario){
       if (arrayListaExcursiones[item].respuestaActividad == imgUrlRespUsuario){
         respuestaCorrectaActividadFunction();
       } else {
-        respuestaIncorrectaActividadFunction()
+        respuestaIncorrectaActividadFunction();
       }
     }
   }
