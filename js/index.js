@@ -271,7 +271,17 @@ function mostrarInformacionExcursion(indexArray){
 	     //<iframe class="video v1" width="560" height="315" src="https://youtu.be/A2YdbncJoPc" frameborder="0" allowfullscreen=""></iframe>
       //$('#videoExcursionCargar').html('<source src="'+ arrayListaExcursiones[item].urlVideo +'" type="video/mp4"></source>' );
       //$('#videoExcursionCargar').html('<iframe src="'+ arrayListaExcursiones[item].urlVideo +'"></iframe>' );
-      $('#videoExcursionCargar').attr('src', arrayListaExcursiones[item].urlVideo);
+        let urlCargada = arrayListaExcursiones[item].urlVideo;
+	let urlDestino = urlCargada.indexOf("https");
+	if(urlDestino == -1){
+		 $('#videoExcursionCargar').attr('src', urlCargada);
+	}else{
+		let patron = "https://www.youtube.com/watch?v=";
+		let nuevoPatron = "https://www.youtube.com/embed/";
+		urlCargada = urlCargada.replace(patron, nuevoPatron);
+		$('#videoExcursionCargar').attr('src', urlCargada);
+	}
+      //$('#videoExcursionCargar').attr('src', arrayListaExcursiones[item].urlVideo);
       //document.getElementById('videoExcursionCargar').load();
       // console.log($('#videoExcursionCargar'));
       // $('#videoExcursionCargar').play();
