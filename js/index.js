@@ -773,6 +773,7 @@ $(function() {
 				// Add controls
 				$('.play').click(function(e) {
 					e.preventDefault();
+					console.log("sdfdf");
 
 					$('.video').playVideo();
 				});
