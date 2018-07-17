@@ -790,7 +790,7 @@ window.onload = function () {
 }
 
 //Funciones del Video
-$(function() {
+/*$(function() {
 			
                     
 				// Init
@@ -825,4 +825,27 @@ $(function() {
 				
 			
 				
-			});
+			});*/
+$(document).ready(function() {
+		$('.video').videoController({
+			videoReady: function() { displayEvent('ready'); },
+			videoStart: function() { displayEvent('start'); },
+			videoPlay: function() { displayEvent('play'); },
+			videoPause: function() { displayEvent('pause'); },
+			videoEnded: function() { displayEvent('ended'); }
+		});
+	});
+
+	function playVideo() {
+		$('.video').videoController('play');
+	}
+
+	function pauseVideo() {
+		$('.video').videoController('pause');
+	}
+
+	function stopVideo() {
+		$('.video').videoController('stop');
+	}
+
+
