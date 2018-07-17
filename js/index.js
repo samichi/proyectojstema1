@@ -272,7 +272,7 @@ function mostrarInformacionExcursion(indexArray){
       //$('#videoExcursionCargar').html('<source src="'+ arrayListaExcursiones[item].urlVideo +'" type="video/mp4"></source>' );
       //$('#videoExcursionCargar').html('<iframe src="'+ arrayListaExcursiones[item].urlVideo +'"></iframe>' );
       $('#videoExcursionCargar').attr('src', arrayListaExcursiones[item].urlVideo);
-      document.getElementById('videoExcursionCargar').load();
+      //document.getElementById('videoExcursionCargar').load();
       // console.log($('#videoExcursionCargar'));
       // $('#videoExcursionCargar').play();
       //$( '#videoExcursion video source' ).attr('src', arrayListaExcursiones[item].urlVideo);
