@@ -538,6 +538,19 @@ function itemArrayExcursionEditado(index){
       arrayListaExcursiones[item].titulo = $('#titulo-exc2').val();
       arrayListaExcursiones[item].descripcion = $('#descripcion-exc2').val();
       arrayListaExcursiones[item].creditos = $('#creditos-exc2').val();
+	    
+	   let urlCargada =  $('#video-exc2').val();
+		let urlDestino = urlCargada.indexOf("https");
+		if(urlDestino == -1){
+			arrayListaExcursiones[item].urlVideo = urlCargada;
+			 //$('#videoExcursionCargar').attr('src', urlCargada);
+		}else{
+			let patron = "https://www.youtube.com/watch?v=";
+			let nuevoPatron = "https://www.youtube.com/embed/";
+			urlCargada = urlCargada.replace(patron, nuevoPatron);
+			arrayListaExcursiones[item].urlVideo = urlCargada;
+		} 
+	    
       arrayListaExcursiones[item].audioActividad = $('#actividad-exc2').val();
       arrayListaExcursiones[item].opciones[0].imgUrl = $('#opcion1-exc2').val();
       arrayListaExcursiones[item].opciones[1].imgUrl = $('#opcion2-exc2').val();
@@ -589,12 +602,25 @@ function agregarElementoArrayExcursionUsuario(index){
 /*----------------------------------------------------------------------------------------------*/
 
 function createListaArrayExcursion(){
+	let nuevoUrlData;
+	let urlCargada = $('#video-exc').val();
+	let urlDestino = urlCargada.indexOf("https");
+	if(urlDestino == -1){
+		nuevoUrlData = urlCargada;
+		//$('#videoExcursionCargar').attr('src', urlCargada);
+	}else{
+	let patron = "https://www.youtube.com/watch?v=";
+	let nuevoPatron = "https://www.youtube.com/embed/";
+	urlCargada = urlCargada.replace(patron, nuevoPatron);
+	nuevoUrlData = urlCargada;
+	//$('#videoExcursionCargar').attr('src', urlCargada);
+}
   //console.log(lastPositionArrayExcursion);
   let datosNuevaExcursion = {
       "id":lastPositionArrayExcursion+1,
       "titulo":$('#titulo-exc').val(),
       "descripcion":$('#descripcion-exc').val(),
-      "creditos":$('#creditos-exc').val(),
+      "creditos":nuevoUrlData,
       "urlVideo":$('#video-exc').val(),
       "audioActividad":$('#actividad-exc').val(),
       "opciones":[],
