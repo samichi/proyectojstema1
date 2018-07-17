@@ -755,28 +755,37 @@ window.onload = function () {
 
 //Funciones del Video
 $(function() {
+			
+
 				// Init
 				$('.video').video();
+
 				// Add controls
 				$('.play').click(function(e) {
 					e.preventDefault();
-          $('.video').playVideo();
+
+					$('.video').playVideo();
 				});
 
 				$('.pause').click(function(e) {
 					e.preventDefault();
-          $('.video').pauseVideo();
+
+					$('.video').pauseVideo();
 				});
 
 				$('.stop').click(function(e) {
 					e.preventDefault();
-          $('.video').stopVideo();
+
+					$('.video').stopVideo();
 				});
 
 				$('.restart').click(function(e) {
 					e.preventDefault();
-        	$('.video').restartVideo();
-				});	
-			});
 
+					$('.video').restartVideo();
+				});
+                
+           
+				
+			});
 
