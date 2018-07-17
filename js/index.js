@@ -560,6 +560,14 @@ function deleteListaArrayExcursion(index){
   readListaArrayExcursion();
 }
 
+function agregarElementoArrayExcursionUsuario(index){
+  for (const item in arrayListaExcursiones){
+    if(arrayListaExcursiones[item].id == index){
+      $( '#tablaUsuarioExcursiones' ).append('<button type="button" onclick="llenarExcursiones(' + arrayListaExcursiones[item].id + ')">' + arrayListaExcursiones[item].titulo + '</button>' );
+    }
+  }
+}
+
 function createListaArrayExcursion(){
   //console.log(lastPositionArrayExcursion);
   let datosNuevaExcursion = {
