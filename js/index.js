@@ -325,7 +325,7 @@ function mostrarInformacionExcursion(indexArray){
 }
 
 $( '#irActividadExcursion' ).click(function(){
-  document.getElementById('videoExcursionCargar').pause();
+  //document.getElementById('videoExcursionCargar').pause();
   $( '#chuChuTvPantalla' ).hide();
   $( '#juegoMenuPrincipal' ).hide();
   $( '#reproducirVideoIntro' ).hide();
