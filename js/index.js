@@ -663,6 +663,7 @@ function cargarListaExcursiones (){
     //console.log(item);
     for (const i in item){
       //console.log(item[i]);
+      lastPositionArrayExcursion = item[i].id;
       let objExcursionItem = new Excursion (item[i]);
       for (const j in item[i].opciones){
         objExcursionItem.opciones.push(new Opcion(item[i].opciones[j]));
