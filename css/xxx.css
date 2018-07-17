@@ -1,0 +1,779 @@
+/*INICIO IMGEN DE FONDO DE DIV*/
+
+
+
+/*FIN  IMGEN DE FONDO DE DIV*/
+
+/*INICIO CSS BOTON*/
+body {font-family: Arial, Helvetica, sans-serif;color:#5b9481;}
+* {
+  box-sizing: border-box;
+}
+.container-boton {
+  /*height: 45px;
+  width: 45px;
+  margin: 50px auto 0;
+  position: relative;*/
+
+  height: 60px;
+  width: 60px;
+  margin:50px auto 0;
+  position: relative;
+}
+.circle-boton {
+  /*cursor: pointer;
+  background-color:#9A77AB;
+  height: 45px;
+  width: 45px;
+  display: block;
+  border: 5px solid #725896;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  animation-name:circle-boton;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:0s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-play-state:running;*/
+   left: 1px;
+  cursor: pointer;
+   background-color:#9A77AB;
+  height: 60px;
+  width: 60px;
+  display: block;
+  border: 5px solid #725896;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  animation-name:circle-boton;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:0s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-play-state:running;
+  -webkit-animation-name:circle-boton;
+  -webkit-animation-duration:1s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-delay:0s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:normal;
+  -webkit-animation-play-state:running;
+}
+.fax{
+  font-size: 52px;
+}
+.fa {
+  /*font-size: 20px;
+  color: #fff;
+  bottom: 27px;
+  position: absolute;
+  left: 75%;
+  margin-left: -18px;
+  animation-name:arrow-boton;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:0s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-play-state:running;*/
+  font-size: 52px;
+  color: #fff;
+  bottom: 27px;
+  position: absolute;
+  left: 63%;
+  margin-left: -18px;
+  animation-name:arrow-boton;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:0s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-play-state:running;
+  -webkit-animation-name:arrow-boton;
+  -webkit-animation-duration:1s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-delay:0s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:normal;
+  -webkit-animation-play-state:running;
+}
+.pulse-boton {
+	/*margin: 100 auto;
+	position: absolute;
+  left: 5px;
+	top: 5px;
+	z-index: 0;
+	background-color: transparent;
+	opacity: 0;
+	width: 38px;
+	height: 38px;
+	border: 10px solid #9A77AB;
+	-moz-border-radius: 30px;
+	-o-border-radius: 30px;
+	-ms-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-animation: pulse-boton 1s linear infinite 0.3s;
+	-moz-animation: pulse-boton 1s linear infinite 0.3s; 
+	border-image: initial;*/
+  margin: 0 auto;
+	position: absolute;
+  left: 5px;
+	top: 5px;
+	z-index: 0;
+	background-color: transparent;
+	opacity: 0;
+	width: 55px;
+	height: 55px;
+	border: 10px solid #9A77AB;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-o-border-radius: 50px;
+	-ms-border-radius: 50px;
+	border-radius: 50px;
+	/* Giving Animation Function */
+	-webkit-animation: pulse-boton 1s linear infinite 0.3s;
+	-moz-animation: pulse-boton 1s linear infinite 0.3s; 
+	border-image: initial;
+}
+@keyframes arrow-boton
+	{
+	/*0%   {bottom:0;}
+	75% {bottom:30px;}
+	100% {bottom:0;}*/
+  0%   {bottom:0;}
+	75% {bottom:35px;}
+	100% {bottom:0;}
+	}
+@-webkit-keyframes arrow-boton
+	{
+    0%   {bottom:0;}
+  75% {bottom:45px;}
+	100% {bottom:0;}
+  }
+@keyframes circle-boton
+	{
+	/*0%   {height:40px;}
+	10% {height: 40px;}
+  50% {height: 50px;}
+	75% {height: 60px;}
+  90% {height: 50px;}
+	100% {height: 40px;}*/
+  0%   {height:60px;}
+	10% {height: 60px;}
+  50% {height: 65px;}
+	75% {height: 75px;}
+  90% {height: 65px;}
+	100% {height: 60px;}
+	}
+@-webkit-keyframes circle-boton
+	{
+    0%   {height:60px;}
+	10% {height: 60px;}
+  50% {height: 65px;}
+	75% {height: 75px;}
+  90% {height: 65px;}
+	100% {height: 60px;}
+	}
+@-webkit-keyframes pulse-boton {      
+  /*30% {-webkit-transform: scale(0.5); opacity: 1;}
+  100% {opacity: 0; -webkit-transform: scale(1.8);}*/
+  0% {-webkit-transform: scale(0); opacity: 0;}
+  8% {-webkit-transform: scale(0); opacity: 0;}
+  15% {-webkit-transform: scale(0.1); opacity: 1;}
+  30% {-webkit-transform: scale(0.5); opacity: 1;}
+  100% {opacity: 0; -webkit-transform: scale(1.5);}
+}
+@-moz-keyframes pulse-boton {    
+  /*100% {opacity: 0; -webkit-transform: scale(1.8);}*/
+  0% {-webkit-transform: scale(0); opacity: 0;}
+  8% {-webkit-transform: scale(0); opacity: 0;}
+  15% {-webkit-transform: scale(0.1); opacity: 1;}
+  30% {-webkit-transform: scale(0.5); opacity: 1;}
+  100% {opacity: 0; -webkit-transform: scale(1.5);}
+}
+/*FIN CSS BOTON*/
+
+.boton-transparet{
+  background: #bac477 ;
+  border: none;
+}
+
+
+.w3-circle{border-radius:50%}
+.w3-black,.w3-hover-black:hover{color:rgb(68, 47, 47)!important;background-color:rgb(247, 243, 243);}
+.w3-button{border:none;cursor:pointer}
+.rowx:after {
+    content: "";
+    clear: both;
+    display: table;
+    padding-bottom: 50px;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 568px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+html h3 p {
+    font-family: "Lucida Sans", sans-serif;
+}
+.menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+.menu li {
+    padding: 5px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+img{
+  height:100%;
+  width: 100%;
+}
+.admin{
+  overflow: hidden;
+  position: fixed;
+  top: 15%;
+  float: right;
+}
+.atras{
+    right: 15px;
+    position: fixed;
+    width: 80px;
+    height: 100px;
+    float: right;
+    top: 80px;
+}
+.respuesta{
+    right: 15px;
+    /* left: auto; */
+    position: fixed;
+    width: 80px;
+    height: 100px;
+    float: right;
+    top: 75%;
+}
+.intro{
+    left: 15px;
+    width: 100px;
+    top: 80px;
+}
+.list{
+    left: 15px;
+    width: 100px;
+    top: 600px;
+}
+
+.edtarList{
+    left: 2px;
+    position: fixed;
+    width: 100px;
+    float: left;
+    top: 600px;
+}
+.registrar{
+    right: 90px;
+    /* left: auto; */
+    position: fixed;
+    width: 80px;
+    height: 100px;
+    float: right;
+    top: 80px;
+}
+.superior{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+}
+/*http://sinlevantar.blogspot.com/2013/02/boton-circular-3d-realista-con-css.html*/
+.user{
+  left: 41%;
+  right: 41%;
+  text-align: center;
+  position: fixed;
+  top: 500px; 
+}
+.inferior{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.from2{
+  max-width:50%;
+  left: 25%;
+  right: 25%;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  top: 520px;  
+}
+video1{
+   /*background: url(fondo.png);*/
+  max-width:50%;
+  /*margin-top: 20%!important;
+  margin:auto;*/
+
+  
+   left: 25%;
+   right: 25%;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   overflow: hidden;
+   position: fixed;
+   top: 250px;
+}
+.form1{
+  /*background: url(fondo.png);*/
+  max-width:50%;
+  /*margin-top: 20%!important;
+  margin:auto;*/
+
+  
+   left: 25%;
+   right: 25%;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   overflow: hidden;
+   position: fixed;
+   top: 250px;
+}
+
+.form2{
+  max-width:50%;
+   left: 25%;
+   right: 25%;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   overflow: hidden;
+   position: fixed;
+   top: 150px;
+}
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.icon {
+    padding: 10px;
+    background: #9a77ab;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid #8f66a3;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #9a77ab;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.usuario{
+  position: relative;
+}
+.btnRegistro{
+  background-color: #9a77ab;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+    top: 500px;   
+    position: absolute;
+}
+iframe {
+    width: 60%;
+}
+.btnLogin{
+    background-color: #9a77ab;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+    top: 500px;
+    position: absolute;
+}
+.btn:hover {
+    opacity: 1;
+}
+
+
+.button {
+    background-color: #9a77ab;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.button:hover {
+    opacity:1;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 40%;
+      padding: 14px 20px;
+    background-color: #9a77ab;
+    margin: 5% 10% 15% auto;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*LISTA DE ACTIVIADES*/
+div.gallery {
+    border: 1px solid #ccc;
+}
+.botoncito{
+    background-color: #b8a0c4;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+.padre {
+  /* IMPORTANTE */
+  text-align: center;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  position:relative;
+    top:50px;
+  
+}
+div .gallery img {
+    width: 100%;
+    height: auto;
+}
+
+ .listaMenu { 
+background: url(image/fondoRegistro.png) no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100% ;
+    text-align: center;
+    
+
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+/*AQUI REVISE*/
+* {
+    box-sizing: border-box;
+}
+.video-top{
+    margin-top: 30px;
+}
+.boton-act-estilo{
+    background-color: #b8a0c4;
+    border: none;
+}
+.responsive {
+    padding: 0 6px;
+    width: 24.99999%;
+    display: inline-block;
+}
+
+.bien{
+    width: 20%;
+}
+.mal{
+    width: 20%;
+}
+.responsiveVideo {
+    padding: 6px 6px 6px 6px;
+    width: 100%;
+    display: inline-block;
+}
+
+
+
+#cover{
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    z-index:5;
+    width:100%;
+    height:100%;
+    display:none;
+    
+      }
+#loginScreen
+{
+    height:380px;
+    width:340px;
+    margin:0 auto;
+    position:relative;
+    z-index:10;
+    display:none;
+	background: url(login.png) no-repeat;
+	border: 3px solid #570694;
+	border-radius:10px;
+    background: rgb(249, 243, 251);
+}
+#loginScreen:target, #loginScreen:target + #cover{
+    display:block;
+    opacity:2;
+}
+.cancel
+{
+    display:block;
+    position:absolute;
+    top:3px;
+    right:2px;
+    background:rgb(249, 243, 251);
+    color: #c789ff;
+    height:30px;
+    width:35px;
+    font-size:30px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:900;
+}
+
+/*------------------------------------------------------------*/
+
+.hero-centro {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero-izq-abajo {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-5%,-5%,0);
+         -moz-transform: translate3d(-5%,-5%,0);
+          -ms-transform: translate3d(-5%,-5%,0);
+           -o-transform: translate3d(-5%,-5%,0);
+              transform: translate3d(-5%,-5%,0);
+}
+.hero-der-abajo {
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-5%,-5%,0);
+         -moz-transform: translate3d(-5%,-5%,0);
+          -ms-transform: translate3d(-5%,-5%,0);
+           -o-transform: translate3d(-5%,-5%,0);
+              transform: translate3d(-5%,-5%,0);
+}
+.hero-der-arriba {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-5%,-5%,0);
+         -moz-transform: translate3d(-5%,-5%,0);
+          -ms-transform: translate3d(-5%,-5%,0);
+           -o-transform: translate3d(-5%,-5%,0);
+              transform: translate3d(-5%,-5%,0);
+}
+.btn.btn-lg {padding: 1px 1px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+.pantalla-principal .imagen .imagen-1{
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.pantalla-principal .imagen .imagen-1 {
+  background-image: url(image/pantallaPrincipal.png); 
+}
+
+@media screen and (min-width: 980px){
+    .hero-centro { width: 980px; }   
+    .hero-izq-abajo { width: 980px; }
+    .hero-der-abajo { width: 980px; }
+    .hero-der-arriba { width: 980px; }
+}
+/*@media only screen and (min-width: 800px) and (max-width: 1280px) {  
+  .user{
+    top: 300px;
+  }
+}*/
+
+
+                          /*TABLET*/
+
+/*@media only screen and (min-width: 1280px), only screen and (min-height: 800px) {
+  .user{
+    top: 500px;
+  }
+}*/
+
+                          /*TABLET*/
+/*@media only screen and (min-width: 800px) and (max-width: 983px) {*//*min-width: 960px*/
+/*  .user{
+    top: 320px;
+  }
+  .from2{
+  top: 400px;  
+    }
+} 
+@media  screen and (min-width: 983px) and (max-width: 1160Ppx) {
+  .user{
+    top: 30px;
+  }
+  .from2{
+  top: 400px;  
+    }
+}
+@media  screen and (min-width:1160px) and (max-width: 1260Ppx) {
+  .user{
+    top: 50px;
+  }
+  .from2{
+  top: 400px;  
+    }
+}*/
+
+                          /*PC ISA*/
+/*@media  screen and (min-width: 1366) and (max-width: 1466px) {
+    .user{
+    top: 500px;
+  }
+  .from2{
+  top: 400px;  
+    }
+}*/
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+      
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+      
+}
