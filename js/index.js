@@ -58,6 +58,25 @@ $ ( '#btnLoginGeneral' ).click(function(){
 $( '#btnAccederUsuario' ).click(function(){
   usuarioEnUso = $( '#usuarioLoginNombre' ).val();
   claveEnUSo = $( '#usuarioLoginClave' ).val();
+  if(usuarioEnUso  == "admin" &&  claveEnUSo == "1234"){
+    $( '#usuarioLoginPantalla' ).hide();
+    $( '#juegoMenuPrincipal' ).show(); //Pantalla boton lista Excursiones
+  } else {
+    for (const item of Object.values(usuariosArray)){
+      if (usuarioEnUso == item.usuario && claveEnUSo == item.clave){
+        idUsuario = item.id;
+        //console.log(idUsuario);
+        $( '#usuarioLoginPantalla' ).hide();
+        $( '#juegoMenuPrincipal' ).show(); //Pantalla boton lista Excursiones
+        $( '#btnJuegoVerExcursiones' ).hide();
+      } else {
+        //alert("Usuario y contraseña invalidos. Ingrese de nuevo...");
+        $( '#usuarioLoginNombre' ).val("");
+        $( '#usuarioLoginClave' ).val("");
+      }
+    }
+  }
+  /*
   for (const item of Object.values(usuariosArray)){
     if (usuarioEnUso == item.usuario && claveEnUSo == item.clave){
       idUsuario = item.id;
@@ -72,7 +91,7 @@ $( '#btnAccederUsuario' ).click(function(){
     else{
       //alert("Password invalido.");
     }
-  }
+  }*/
 });
 
 $ ( '#btnUsuarioSalirJuego' ).click(function(){
