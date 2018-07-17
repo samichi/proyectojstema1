@@ -790,13 +790,10 @@ window.onload = function () {
 }
 
 //Funciones del Video
-/*$(function() {
-			
-                    
-				// Init
+$(function() {
+	// Init
 				$('.video').video();
-
-				// Add controls
+// Add controls
 				$('.play').click(function(e) {
 					e.preventDefault();
 
@@ -825,8 +822,8 @@ window.onload = function () {
 				
 			
 				
-			});*/
-$(document).ready(function() {
+			});
+/*$(document).ready(function() {
 		$('.video').videoController({
 			videoReady: function() { displayEvent('ready'); },
 			videoStart: function() { displayEvent('start'); },
@@ -846,6 +843,6 @@ $(document).ready(function() {
 
 	function stopVideo() {
 		$('.video').videoController('stop');
-	}
+	}*/
 
 
