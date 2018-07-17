@@ -560,13 +560,20 @@ function deleteListaArrayExcursion(index){
   readListaArrayExcursion();
 }
 
+/*--------------------------------------------------------------------------------------------------*/
+
 function agregarElementoArrayExcursionUsuario(index){
   for (const item in arrayListaExcursiones){
     if(arrayListaExcursiones[item].id == index){
-      $( '#tablaUsuarioExcursiones' ).append('<button type="button" onclick="llenarExcursiones(' + arrayListaExcursiones[item].id + ')">' + arrayListaExcursiones[item].titulo + '</button>' );
+      $( '#tablaUsuarioExcursiones' ).append('<div class="responsive gallery"><button type="button" class="botoncito" style="color:#fff;" onclick="llenarExcursiones(' + arrayListaExcursiones[item].id + ')"><img src="https://bit.ly/2MVCqkX" alt="Cinque Terre" width="600" height="400"><div class="desc" style="color:#fff;">'  + arrayListaExcursiones[item].titulo + '</div></button></div>' );
     }
   }
 }
+
+   // $( '#tablaUsuarioExcursiones' ).append('<div class="responsive gallery"><button type="button" class="botoncito" style="color:#fff;" onclick="llenarExcursiones(' + arrayListaExcursiones[item].id + ')"><img src="https://bit.ly/2MVCqkX" alt="Cinque Terre" width="600" height="400"><div class="desc" style="color:#fff;">' + arrayListaExcursiones[item].titulo + '</div></button></div>' );
+
+
+/*----------------------------------------------------------------------------------------------*/
 
 function createListaArrayExcursion(){
   //console.log(lastPositionArrayExcursion);
