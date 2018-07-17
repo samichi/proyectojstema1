@@ -1,22 +1,4 @@
-language: php
-
-dist: xenial 
-
-php:
-- 7.0
-
-before_install:
-- sudo apt-get update -q
-- sudo apt-get install apache2 -y
-
-
-before_script: true
-
-script: 
-- phpunit prueba.php
-
-
-notifications:
-  email:
-    - leonbohorquezisabel@gmail.com
-irc: "irc.freenode.org#yourfavouriteroomfortravis"
+deploy:
+  provider: heroku
+  api_key:
+    secure: "YOUR ENCRYPTED API KEY"
