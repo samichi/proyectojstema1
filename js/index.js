@@ -481,3 +481,264 @@ function exportJSON() {
   linkElement.setAttribute('download', exportFileDefaultName);
   linkElement.click();
 }
+
+function readListaArrayExcursion(){
+  for (const item in arrayListaExcursiones){
+    $('#contenidoTablaAdminExcursiones').append('<tr><td>' + arrayListaExcursiones[item].titulo + '</td><td>' +  arrayListaExcursiones[item].descripcion + '</td><td>' + arrayListaExcursiones[item].urlVideo + '</td><td>' + arrayListaExcursiones[item].creditos + '</td><td>' + arrayListaExcursiones[item].audioActividad + '</td><td>' + arrayListaExcursiones[item].opciones[0].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[1].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[2].imgUrl + '</td><td>' + arrayListaExcursiones[item].respuestaActividad + '</td><td><button type="button" onclick="editListaArrayExcursion(' + arrayListaExcursiones[item].id + ')">Editar</button>' + '</td><td><button type="button" onclick="deleteListaArrayExcursion(' + item + ')">Eliminar</button></td></tr>');
+  }
+}
+
+//arrayListaExcursiones[item].id
+
+function agregarElementoTablaExcursion(index){
+  for (let item in arrayListaExcursiones){
+    if(arrayListaExcursiones[item].id == index){
+      $('#contenidoTablaAdminExcursiones').append('<tr><td>' + arrayListaExcursiones[item].titulo + '</td><td>' +  arrayListaExcursiones[item].descripcion + '</td><td>' + arrayListaExcursiones[item].urlVideo + '</td><td>' + arrayListaExcursiones[item].creditos + '</td><td>' + arrayListaExcursiones[item].audioActividad + '</td><td>' + arrayListaExcursiones[item].opciones[0].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[1].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[2].imgUrl + '</td><td>' + arrayListaExcursiones[item].respuestaActividad + '</td><td><button type="button" onclick="editListaArrayExcursion(' + arrayListaExcursiones[item].id + ')">Editar</button>' + '</td><td><button type="button" onclick="deleteListaArrayExcursion(' + item + ')">Eliminar</button></td></tr>');
+    }
+  }
+}
+
+//arrayListaExcursiones[item].id
+
+function itemArrayExcursionEditado(index){
+  for (let item in arrayListaExcursiones){
+    if(arrayListaExcursiones[item].id == index){
+      arrayListaExcursiones[item].titulo = $('#titulo-exc2').val();
+      arrayListaExcursiones[item].descripcion = $('#descripcion-exc2').val();
+      arrayListaExcursiones[item].creditos = $('#creditos-exc2').val();
+      arrayListaExcursiones[item].audioActividad = $('#actividad-exc2').val();
+      arrayListaExcursiones[item].opciones[0].imgUrl = $('#opcion1-exc2').val();
+      arrayListaExcursiones[item].opciones[1].imgUrl = $('#opcion2-exc2').val();
+      arrayListaExcursiones[item].opciones[2].imgUrl = $('#opcion3-exc2').val();
+      arrayListaExcursiones[item].respuestaActividad =  $('#respuesta-exc2').val();
+    }
+  }
+}
+
+function editListaArrayExcursion(index){
+  $('#readListaExcursiones').hide();
+  $('#editExcursion').show();
+  for (let item in arrayListaExcursiones){
+    if(arrayListaExcursiones[item].id == index){
+      $('#titulo-exc2').val(arrayListaExcursiones[item].titulo);
+      $('#descripcion-exc2').val(arrayListaExcursiones[item].descripcion);
+      $('#creditos-exc2').val(arrayListaExcursiones[item].creditos);
+      $('#video-exc2').val(arrayListaExcursiones[item].urlVideo);
+      $('#actividad-exc2').val(arrayListaExcursiones[item].audioActividad);
+      $('#opcion1-exc2').val(arrayListaExcursiones[item].opciones[0].imgUrl);
+      $('#opcion2-exc2').val(arrayListaExcursiones[item].opciones[1].imgUrl);
+      $('#opcion3-exc2').val(arrayListaExcursiones[item].opciones[2].imgUrl);
+      $('#respuesta-exc2').val(arrayListaExcursiones[item].respuestaActividad);
+      itemIdExcursionEditar = index;
+    }
+  }
+}
+
+function deleteListaArrayExcursion(index){
+  arrayListaExcursiones.splice(index, 1);
+  //console.log(arrayListaExcursiones);
+  $('#contenidoTablaAdminExcursiones').html("");
+  readListaArrayExcursion();
+}
+
+function createListaArrayExcursion(){
+  //console.log(lastPositionArrayExcursion);
+  let datosNuevaExcursion = {
+      "id":lastPositionArrayExcursion+1,
+      "titulo":$('#titulo-exc').val(),
+      "descripcion":$('#descripcion-exc').val(),
+      "creditos":$('#creditos-exc').val(),
+      "urlVideo":$('#video-exc').val(),
+      "audioActividad":$('#actividad-exc').val(),
+      "opciones":[],
+      "respuestaActividad":$('#respuesta-exc').val(),
+      "respuestaUsuario":""
+  };
+  let datosNuevaOpcion01 = {"imgUrl":$('#opcion1-exc').val()};
+  let datosNuevaOpcion02 = {"imgUrl":$('#opcion2-exc').val()};
+  let datosNuevaOpcion03 = {"imgUrl":$('#opcion3-exc').val()};
+  let newObjImg01 = new Opcion(datosNuevaOpcion01);
+  let newObjImg02 = new Opcion(datosNuevaOpcion02);
+  let newObjImg03 = new Opcion(datosNuevaOpcion03);
+  let newObjExc = new Excursion(datosNuevaExcursion);
+  newObjExc.opciones.push(newObjImg01);
+  newObjExc.opciones.push(newObjImg02);
+  newObjExc.opciones.push(newObjImg03);
+  //console.log(datosNuevaExcursion);
+  arrayListaExcursiones.push(newObjExc);
+  agregarElementoTablaExcursion(newObjExc.id);
+  agregarElementoArrayExcursionUsuario(newObjExc.id);
+  console.log("Inserción Exitosa");
+  //mostrarArrayObjetos (arrayListaExcursiones);
+}
+
+$( '#btnAdminRegresarMenu' ).click(function(){
+  $('#adminExcursionesCRUD').hide();
+  $('#juegoMenuPrincipal').show();
+});
+
+$('#btnEditarExcursionAdmin').click(function(){
+  itemArrayExcursionEditado(itemIdExcursionEditar);
+  $('#contenidoTablaAdminExcursiones').html("");
+  readListaArrayExcursion();
+});
+
+$('#btnEditarRegresarCRUDAdmin').click(function(){
+  $('#editExcursion').hide();
+  $('#readListaExcursiones').show();
+  
+});
+
+$( '#btnCrearNuevaExcursion' ).click(function(){
+  $( '#readListaExcursiones' ).hide();
+  $( '#createExcursion' ).show();
+  
+});
+
+$('#btnGuardarNuevaExcursion').click(function(){
+  createListaArrayExcursion();
+});
+
+$('#btnRegresarCRUDAdmin').click(function(){
+  $('#createExcursion').hide();
+  $('#readListaExcursiones').show();
+});
+
+$( '#btnJuegoVerExcursiones' ).click(function(){
+  $( '#juegoMenuPrincipal' ).hide();
+  $( '#adminExcursionesCRUD' ).show();
+  readListaArrayExcursion();
+  $( '#createExcursion' ).hide();
+  $( '#editExcursion' ).hide();
+});
+
+
+
+/*
+MOSTRAR ARRAY DE OBJETOS
+Esta función ayuda a mostrar los datos superficiales de un array.
+*/
+
+function mostrarArrayObjetos (objArray){
+  for (const objeto of Object.values(objArray)) {
+    for (const i in objeto){
+      console.log(objeto[i]);
+    }
+  }
+}
+
+/*
+CARGAR DATA JSON
+Esta función carga el json en el array de usuarios.
+*/
+
+function cargarDataJSON (){
+  for (const objeto of Object.values(dataParse)) {  
+    for (const i in objeto){
+      let objUsuario = new Usuario (objeto[i]);
+      //console.log(objeto[i].id);
+      //console.log(objeto[i].usuario);
+      //console.log(objeto[i].clave);
+      for (const j in objeto[i].excursiones){
+        objExcursion = new Excursion(objeto[i].excursiones[j]);
+        //console.log(objeto[i].excursiones[j]);
+        for(const k in objeto[i].excursiones[j].opciones){
+          objExcursion.opciones.push(new Opcion (objeto[i].excursiones[j].opciones[k])); 
+          //console.log(objeto[i].excursiones[j].opciones[k]); 
+        }
+        objUsuario.excursiones.push(objExcursion);
+      }
+      usuariosArray.push(objUsuario);
+    }
+  }
+}
+
+/*
+CARGAR LISTA DE EXCURSIONES
+Esta función carga el json en el array de excursiones.
+*/
+
+function cargarListaExcursiones (){
+  for (let item of Object.values(listaExcursion)) {
+    //console.log(item);
+    for (const i in item){
+      //console.log(item[i]);
+      let objExcursionItem = new Excursion (item[i]);
+      for (const j in item[i].opciones){
+        objExcursionItem.opciones.push(new Opcion(item[i].opciones[j]));
+      }
+      arrayListaExcursiones.push(objExcursionItem);  
+    }
+    
+  }
+  //console.log(arrayListaExcursiones);
+}
+
+
+/*
+OCULTAR DIV
+Solo deja el div principal.
+*/
+
+function ocultarDiv(){
+  $( '#usuarioLoginPantalla' ).hide();
+  $( '#usuarioRegistroPantalla' ).hide();
+  $( '#juegoMenuPrincipal' ).hide();
+  $( '#reproducirVideoIntro' ).hide();
+  $( '#listaExcursiones' ).hide();
+  $( '#juegoExcursion' ).hide();
+  $( '#adminExcursionesCRUD' ).hide();
+  $( '#respuestaActividadJuego' ).hide();
+  $( '#verRespuestaCorrectaDiv' ).hide();
+}
+
+/*
+RESETVARJUEGO
+Resetear las variables
+*/
+
+function resetVarJuego(){
+  usuarioEnUso = '';
+  claveEnUSo = '';
+  respActividad = '';
+  actividadAudioJuego = '';
+  posicionArrayExcursion = 0;
+  idExcursion  = 0;
+  idUsuario = 0;
+}
+
+window.onload = function () {
+  cargarDataJSON();
+  cargarListaExcursiones();
+  //mostrarArrayObjetos(usuariosArray);
+  ocultarDiv();  
+  fillArrayExcursion();
+}
+
+//Funciones del Video
+$(function() {
+				// Init
+				$('.video').video();
+				// Add controls
+				$('.play').click(function(e) {
+					e.preventDefault();
+          $('.video').playVideo();
+				});
+
+				$('.pause').click(function(e) {
+					e.preventDefault();
+          $('.video').pauseVideo();
+				});
+
+				$('.stop').click(function(e) {
+					e.preventDefault();
+          $('.video').stopVideo();
+				});
+
+				$('.restart').click(function(e) {
+					e.preventDefault();
+        	$('.video').restartVideo();
+				});	
+			});
+
+
