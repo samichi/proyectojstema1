@@ -661,7 +661,7 @@ let usuarioAudio = $('#actividad-exc').val();
       "portada":$('#portada-exc').val(),
       "descripcion":$('#descripcion-exc').val(),
       "creditos":$('#creditos-exc').val(),
-      "urlVideo":$('#actividad-exc').val(),
+      "urlVideo":$('#video-exc').val(),
       "audioActividad":nuevoUrlAudio,
       "opciones":[],
       "respuestaActividad":$('#respuesta-exc').val(),
