@@ -1,6 +1,6 @@
-var dataParse = JSON.parse('{"usuarios":[{"id":1, "usuario":"Jenny","clave":"1234", "excursiones":[{"id":1, "titulo":"Animales", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/videos/animales.mp4", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/vaca.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/oveja.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/caballo.png"}], "respuestaActividad":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/vaca.png", "respuestaUsuario":""},{"id":2, "titulo":"Frutas", "descripcion":"Muestra como identificar las frutas", "creditos":"ChuChuTv Y GrupoJIM", "urlVideo":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/videos/frutas.mp4", "audioActividad":"./audio/actividadFruta.mp3","opciones":[{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/banano.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/manzanas.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/naranjas.png"}], "respuestaActividad":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/banano.png", "respuestaUsuario":""}]}, {"id":2, "usuario":"Meche","clave":"1234", "excursiones":[{"id":1, "titulo":"Animales", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/videos/animales.mp4", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/vaca.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/oveja.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/caballo.png"}], "respuestaActividad":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/vaca.png", "respuestaUsuario":""}]}]}');
+var dataParse = JSON.parse('{"usuarios":[{"id":1, "usuario":"Jenny","clave":"1234", "excursiones":[{"id":1, "titulo":"Animales", "portada":"./image/portadaAnimales.jpg", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ftNOCfqoIjQ", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"./image/vaca.png"},{"imgUrl":"./image/oveja.png"},{"imgUrl":"./image/caballo.png"}], "respuestaActividad":"./image/vaca.png", "respuestaUsuario":""},{"id":2, "titulo":"Frutas", "portada":"./image/portadaFrutas.jpg", "descripcion":"Muestra como identificar las frutas", "creditos":"ChuChuTv Y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=kvC4_HBOnI0", "audioActividad":"./audio/actividadFruta.mp3","opciones":[{"imgUrl":"./image/banano.png"},{"imgUrl":"./image/manzanas.png"},{"imgUrl":"./image/naranjas.png"}], "respuestaActividad":"./image/banano.png", "respuestaUsuario":""}]}, {"id":2, "usuario":"Meche","clave":"1234", "excursiones":[{"id":1, "titulo":"Animales", "portada":"./image/portadaAnimales.jpg", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ftNOCfqoIjQ", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"./image/vaca.png"},{"imgUrl":"./image/oveja.png"},{"imgUrl":"./image/caballo.png"}], "respuestaActividad":"./image/vaca.png", "respuestaUsuario":""}]}]}');
 
-var listaExcursion = JSON.parse('{"excursiones":[{"id":1, "titulo":"Animales", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ftNOCfqoIjQ", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/vaca.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/oveja.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/caballo.png"}], "respuestaActividad":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/vaca.png", "respuestaUsuario":""},{"id":2, "titulo":"Frutas", "descripcion":"Muestra como identificar las frutas", "creditos":"ChuChuTv Y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=kvC4_HBOnI0", "audioActividad":"./audio/actividadFruta.mp3","opciones":[{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/banano.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/manzanas.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/naranjas.png"}], "respuestaActividad":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/banano.png", "respuestaUsuario":""},{"id":3,"titulo":"Numeros", "descripcion":"Muestra como contar del numero uno al numero cinco", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=xxJeIxsOl-Q", "audioActividad":"./audio/juegoTercero.mp3", "opciones":[{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/uno.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/dos.png"},{"imgUrl":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/tres.png"}], "respuestaActividad":"https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/dos.png", "respuestaUsuario":""}]}');
+var listaExcursion = JSON.parse('{"excursiones":[{"id":1, "titulo":"Animales", "portada":"./image/portadaAnimales.jpg", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ftNOCfqoIjQ", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"./image/vaca.png"},{"imgUrl":"./image/oveja.png"},{"imgUrl":"./image/caballo.png"}], "respuestaActividad":"./image/vaca.png", "respuestaUsuario":""},{"id":2, "titulo":"Frutas", "portada":"./image/portadaFrutas.jpg", "descripcion":"Muestra como identificar las frutas", "creditos":"ChuChuTv Y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=kvC4_HBOnI0", "audioActividad":"./audio/actividadFruta.mp3","opciones":[{"imgUrl":"./image/banano.png"},{"imgUrl":"./image/manzanas.png"},{"imgUrl":"./image/naranjas.png"}], "respuestaActividad":"./image/banano.png", "respuestaUsuario":""},{"id":3,"titulo":"Numeros", "portada":"./image/portadaNumeros.jpg", "descripcion":"Muestra como contar del numero uno al numero cinco", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=xxJeIxsOl-Q", "audioActividad":"./audio/juegoTercero.mp3", "opciones":[{"imgUrl":"./image/uno.png"},{"imgUrl":"./image/dos.png"},{"imgUrl":"./image/tres.png"}], "respuestaActividad":"./image/dos.png", "respuestaUsuario":""}]}');
 
 /*VARIABLES GLOBALES*/
 var actividadAudioJuego;
@@ -26,6 +26,7 @@ class Excursion {
   constructor(obj){
     this.id = obj.id;
     this.titulo = obj.titulo;
+    this.portada = obj.portada;
     this.descripcion = obj.descripcion;
     this.creditos = obj.creditos;
     this.urlVideo = obj.urlVideo;
@@ -169,6 +170,7 @@ $( 'btnVideoIntroJuego' ).click(function(){
 
 //Boton para ir a la lista de Excursiones
 $( '#btnJuegoListaExcursiones' ).click(function(){
+  fillArrayExcursion();
   $( '#chuChuTvPantalla' ).hide();
   $( '#reproducirVideoIntro' ).hide();
   $( '#juegoExcursion' ).hide();
@@ -203,9 +205,12 @@ $( '#btnJuegoVerExcursiones' ).click(function(){
 //FUNCIONES DE LOS BOTONES DEL DIV LISTAEXCURSIONES
            //Excursiones
 function fillArrayExcursion(){
+  $('#tablaUsuarioExcursiones').empty();
   for (const item in arrayListaExcursiones){
     //posicionArrayExcursion = arrayListaExcursiones[item].id -1;
-    $( '#tablaUsuarioExcursiones' ).append('<div class="responsive gallery"><button type="button" class="botoncito" style="color:#fff;" onclick="llenarExcursiones(' + arrayListaExcursiones[item].id + ')"><img src="https://bit.ly/2MVCqkX" alt="Cinque Terre" width="600" height="400"><div class="desc" style="color:#fff;">' + arrayListaExcursiones[item].titulo + '</div></button></div>' );
+    $( '#tablaUsuarioExcursiones' ).append('<div class="responsive gallery2"><button type="button" class="btnExcursionActividad" onclick="llenarExcursiones(' 
+    + arrayListaExcursiones[item].id + ')"><img class="portadaExcursionJuego" src="' + arrayListaExcursiones[item].portada 
+    + '" alt="Portada_Excursion"><div>' + arrayListaExcursiones[item].titulo + '</div></button></div>' );
     //console.log(item);
   }
 }
@@ -244,6 +249,7 @@ $('#btnCerrarExcursionesMenuUsuario').click(function(){
 //FUNCIONES DE LOS BOTONES DEL DIV JUEGOEXCURSION
 
 $('#btnMenuPrincipalRegresar').click(function() {
+  resetVarJuego();
   $( '#reproducirVideoIntro' ).hide();
   $( '#listaExcursiones' ).hide();
   $( '#juegoExcursion' ).hide();
@@ -254,7 +260,7 @@ $('#btnMenuPrincipalRegresar').click(function() {
   $( '#usuarioRegistroPantalla' ).hide();
   $('#juegoMenuPrincipal').hide();
   $('#chuChuTvPantalla').show();
-  resetVarJuego();
+  
     
 });
 
@@ -306,6 +312,7 @@ function mostrarInformacionExcursion(indexArray){
             let datosExcursion = {
                   "id":arrayListaExcursiones[item].id,
                   "titulo":arrayListaExcursiones[item].titulo,
+                  "portada":arrayListaExcursiones[item].portada,
                   "descripcion":arrayListaExcursiones[item].descripcion,
                   "creditos":"ChuChuTv y GrupoJIM",
                   "urlVideo":arrayListaExcursiones[item].urlVideo,
@@ -336,6 +343,9 @@ function mostrarInformacionExcursion(indexArray){
 
 $( '#irActividadExcursion' ).click(function(){
   //document.getElementById('videoExcursionCargar').pause();
+  var detener= $('#videoExcursionCargar').attr("src");
+	$('#videoExcursionCargar').attr("src",detener);
+	
   $( '#chuChuTvPantalla' ).hide();
   $( '#juegoMenuPrincipal' ).hide();
   $( '#reproducirVideoIntro' ).hide();
@@ -515,8 +525,15 @@ function exportJSON() {
 }
 
 function readListaArrayExcursion(){
+  $('#contenidoTablaAdminExcursiones').html("");
   for (const item in arrayListaExcursiones){
-    $('#contenidoTablaAdminExcursiones').append('<tr><td>' + arrayListaExcursiones[item].titulo + '</td><td>' +  arrayListaExcursiones[item].descripcion + '</td><td>' + arrayListaExcursiones[item].urlVideo + '</td><td>' + arrayListaExcursiones[item].creditos + '</td><td>' + arrayListaExcursiones[item].audioActividad + '</td><td>' + arrayListaExcursiones[item].opciones[0].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[1].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[2].imgUrl + '</td><td>' + arrayListaExcursiones[item].respuestaActividad + '</td><td><button type="button" onclick="editListaArrayExcursion(' + arrayListaExcursiones[item].id + ')">Editar</button>' + '</td><td><button type="button" onclick="deleteListaArrayExcursion(' + item + ')">Eliminar</button></td></tr>');
+    $('#contenidoTablaAdminExcursiones').append('<tr><td>' + arrayListaExcursiones[item].titulo + '</td><td>' +  arrayListaExcursiones[item].portada
+    + '</td><td>' +  arrayListaExcursiones[item].descripcion + '</td><td>' + arrayListaExcursiones[item].urlVideo 
+    + '</td><td>' + arrayListaExcursiones[item].creditos + '</td><td>' + arrayListaExcursiones[item].audioActividad 
+    + '</td><td>' + arrayListaExcursiones[item].opciones[0].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[1].imgUrl + '</td><td>' 
+    + arrayListaExcursiones[item].opciones[2].imgUrl + '</td><td>' + arrayListaExcursiones[item].respuestaActividad 
+    + '</td><td><button type="button" onclick="editListaArrayExcursion(' + arrayListaExcursiones[item].id + ')">Editar</button>' 
+    + '</td><td><button type="button" onclick="deleteListaArrayExcursion(' + item + ')">Eliminar</button></td></tr>');
   }
 }
 
@@ -525,7 +542,13 @@ function readListaArrayExcursion(){
 function agregarElementoTablaExcursion(index){
   for (let item in arrayListaExcursiones){
     if(arrayListaExcursiones[item].id == index){
-      $('#contenidoTablaAdminExcursiones').append('<tr><td>' + arrayListaExcursiones[item].titulo + '</td><td>' +  arrayListaExcursiones[item].descripcion + '</td><td>' + arrayListaExcursiones[item].urlVideo + '</td><td>' + arrayListaExcursiones[item].creditos + '</td><td>' + arrayListaExcursiones[item].audioActividad + '</td><td>' + arrayListaExcursiones[item].opciones[0].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[1].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[2].imgUrl + '</td><td>' + arrayListaExcursiones[item].respuestaActividad + '</td><td><button type="button" onclick="editListaArrayExcursion(' + arrayListaExcursiones[item].id + ')">Editar</button>' + '</td><td><button type="button" onclick="deleteListaArrayExcursion(' + item + ')">Eliminar</button></td></tr>');
+      $('#contenidoTablaAdminExcursiones').append('<tr><td>' + arrayListaExcursiones[item].titulo + '</td><td>' +  arrayListaExcursiones[item].portada
+      + '</td><td>' +  arrayListaExcursiones[item].descripcion + '</td><td>' + arrayListaExcursiones[item].urlVideo + '</td><td>' 
+      + arrayListaExcursiones[item].creditos + '</td><td>' + arrayListaExcursiones[item].audioActividad + '</td><td>' 
+      + arrayListaExcursiones[item].opciones[0].imgUrl + '</td><td>' + arrayListaExcursiones[item].opciones[1].imgUrl + '</td><td>' 
+      + arrayListaExcursiones[item].opciones[2].imgUrl + '</td><td>' + arrayListaExcursiones[item].respuestaActividad + 
+      '</td><td><button type="button" onclick="editListaArrayExcursion(' + arrayListaExcursiones[item].id +
+      ')">Editar</button>' + '</td><td><button type="button" onclick="deleteListaArrayExcursion(' + item + ')">Eliminar</button></td></tr>');
     }
   }
 }
@@ -536,6 +559,7 @@ function itemArrayExcursionEditado(index){
   for (let item in arrayListaExcursiones){
     if(arrayListaExcursiones[item].id == index){
       arrayListaExcursiones[item].titulo = $('#titulo-exc2').val();
+      arrayListaExcursiones[item].portada = $('#portada-exc2').val();
       arrayListaExcursiones[item].descripcion = $('#descripcion-exc2').val();
       arrayListaExcursiones[item].creditos = $('#creditos-exc2').val();
 	    
@@ -566,6 +590,7 @@ function editListaArrayExcursion(index){
   for (let item in arrayListaExcursiones){
     if(arrayListaExcursiones[item].id == index){
       $('#titulo-exc2').val(arrayListaExcursiones[item].titulo);
+      $('#portada-exc2').val(arrayListaExcursiones[item].portada);
       $('#descripcion-exc2').val(arrayListaExcursiones[item].descripcion);
       $('#creditos-exc2').val(arrayListaExcursiones[item].creditos);
       $('#video-exc2').val(arrayListaExcursiones[item].urlVideo);
@@ -591,12 +616,13 @@ function deleteListaArrayExcursion(index){
 function agregarElementoArrayExcursionUsuario(index){
   for (const item in arrayListaExcursiones){
     if(arrayListaExcursiones[item].id == index){
-      $( '#tablaUsuarioExcursiones' ).append('<div class="responsive gallery"><button type="button" class="botoncito" style="color:#fff;" onclick="llenarExcursiones(' + arrayListaExcursiones[item].id + ')"><img src="https://bit.ly/2MVCqkX" alt="Cinque Terre" width="600" height="400"><div class="desc" style="color:#fff;">'  + arrayListaExcursiones[item].titulo + '</div></button></div>' );
+      $( '#tablaUsuarioExcursiones' ).append('<div class="responsive gallery2"><button type="button" class="btnExcursionActividad" onclick="llenarExcursiones(' 
+      + arrayListaExcursiones[item].id + ')"><img class="portadaExcursionJuego src="' + arrayListaExcursiones[item].portada + '" alt="Portada_Excursion">'  
+      + arrayListaExcursiones[item].titulo + '</div></button></div>' );
     }
   }
 }
-
-   // $( '#tablaUsuarioExcursiones' ).append('<div class="responsive gallery"><button type="button" class="botoncito" style="color:#fff;" onclick="llenarExcursiones(' + arrayListaExcursiones[item].id + ')"><img src="https://bit.ly/2MVCqkX" alt="Cinque Terre" width="600" height="400"><div class="desc" style="color:#fff;">' + arrayListaExcursiones[item].titulo + '</div></button></div>' );
+// $( '#tablaUsuarioExcursiones' ).append('<div class="responsive gallery"><button type="button" class="botoncito" style="color:#fff;" onclick="llenarExcursiones(' + arrayListaExcursiones[item].id + ')"><img src="https://bit.ly/2MVCqkX" alt="Cinque Terre" width="600" height="400"><div class="desc" style="color:#fff;">' + arrayListaExcursiones[item].titulo + '</div></button></div>' );
 
 
 /*----------------------------------------------------------------------------------------------*/
@@ -619,9 +645,10 @@ function createListaArrayExcursion(){
   let datosNuevaExcursion = {
       "id":lastPositionArrayExcursion+1,
       "titulo":$('#titulo-exc').val(),
+      "portada":$('#portada-exc').val(),
       "descripcion":$('#descripcion-exc').val(),
-      "creditos":nuevoUrlData,
-      "urlVideo":$('#video-exc').val(),
+      "creditos":$('#creditos-exc').val(),
+      "urlVideo":nuevoUrlData,
       "audioActividad":$('#actividad-exc').val(),
       "opciones":[],
       "respuestaActividad":$('#respuesta-exc').val(),
@@ -641,6 +668,7 @@ function createListaArrayExcursion(){
   arrayListaExcursiones.push(newObjExc);
   agregarElementoTablaExcursion(newObjExc.id);
   agregarElementoArrayExcursionUsuario(newObjExc.id);
+  alert("Inserción Exitosa");
   console.log("Inserción Exitosa");
   //mostrarArrayObjetos (arrayListaExcursiones);
 }
@@ -789,40 +817,6 @@ window.onload = function () {
   fillArrayExcursion();
 }
 
-//Funciones del Video
-$(function() {
-	// Init
-				$('.video').video();
-// Add controls
-				$('.play').click(function(e) {
-					e.preventDefault();
-
-					$('.video').playVideo();
-				});
-
-				$('.pause').click(function(e) {
-					e.preventDefault();
-
-					$('.video').pauseVideo();
-				});
-
-				$('.stop').click(function(e) {
-					e.preventDefault();
-
-					$('.video').stopVideo();
-				});
-
-				$('.restart').click(function(e) {
-					e.preventDefault();
-
-					$('.video').restartVideo();
-				});
-                
-             
-				
-			
-				
-			});
 /*$(document).ready(function() {
 		$('.video').videoController({
 			videoReady: function() { displayEvent('ready'); },
@@ -832,17 +826,116 @@ $(function() {
 			videoEnded: function() { displayEvent('ended'); }
 		});
 	});
-
 	function playVideo() {
 		$('.video').videoController('play');
 	}
-
 	function pauseVideo() {
 		$('.video').videoController('pause');
 	}
-
 	function stopVideo() {
 		$('.video').videoController('stop');
 	}*/
 
+
+
+$('#actividad-exc').change(function () {
+    //obtenemos un array con los datos del archivo
+    var file = $("#actividad-exc")[0].files[0];
+	  alert(file);
+    //obtenemos el nombre del archivo
+    var fileName = file.name;
+	     alert(fileName);
+    //obtenemos la extensión del archivo
+    fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
+    //obtenemos el tamaño del archivo
+    var fileSize = file.size;
+    //obtenemos el tipo de archivo image/png ejemplo
+    var fileType = file.type;
+    //mensaje con la información del archivo
+   // showMessageA("<span>Archivo para subir: " + fileName + ", peso total: " + fileSize + " bytes.</span>");
+});
+
+
+$('#actividad-exc2').change(function () {
+    //obtenemos un array con los datos del archivo
+    var file = $("#actividad-exc2")[0].files[0];
+	  alert(file);
+    //obtenemos el nombre del archivo
+    var fileName = file.name;
+	     alert(fileName);
+    //obtenemos la extensión del archivo
+    fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
+    //obtenemos el tamaño del archivo
+    var fileSize = file.size;
+    //obtenemos el tipo de archivo image/png ejemplo
+    var fileType = file.type;
+    //mensaje con la información del archivo
+   showMessage("<span>Archivo para subir: " + fileName + ", peso total: " + fileSize + " bytes.</span>");
+});
+
+$('.AgregarAudio').click(function () {
+    //información del formulario
+    var formData = new FormData($(".formulario")[0]);
+    var message = "";
+    //hacemos la petición ajax  
+    $.ajax({
+        url: ' ../php/subir.php',
+        type: 'POST',
+        // Form data
+        //datos del formulario
+        data: formData,
+        //necesario para subir archivos via ajax
+        cache: false,
+        contentType: false,
+        processData: false,
+        //mientras enviamos el archivo
+        beforeSend: function () {
+            message = $("<span\>Subiendo el audio, por favor espere...</span>");
+            showMessage(message);
+        },
+        //una vez finalizado correctamente
+        success: function (data) {
+		alert("Inserto audio");
+            message = $("<span\>El audio ha subido correctamente.</span>");
+            showMessage(message);
+            if (isImage(fileExtension)) {
+                $(".fondoAudio").html("<audio controls><source src='../audio/" + data + "' type='audio/mp3'></audio>");
+            
+            }
+        },
+        //si ha ocurrido un error
+        error: function () {
+            message = $("<span>Ha ocurrido un error.</span>");
+            showMessage(message);
+        }
+    });
+});
+
+
+function showMessage(message) {
+    $(".messagesA").html("").show();
+    $(".messagesA").html(message);
+}
+
+//comprobamos si el archivo a subir es una imagen
+//para visualizarla una vez haya subido
+function isImage(extension) {
+    switch (extension.toLowerCase()) {
+        case 'jpg':
+        case 'gif':
+        case 'png':
+        case 'jpeg':
+            return true;
+            break;
+        case 'mp3':
+        case 'wav':
+        case 'mp4':
+        case 'ogg':
+            return true;
+            break;
+        default:
+            return false;
+            break;
+    }
+}
 
