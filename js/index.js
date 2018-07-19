@@ -628,6 +628,7 @@ function agregarElementoArrayExcursionUsuario(index){
 /*----------------------------------------------------------------------------------------------*/
 
 function createListaArrayExcursion(){
+	let nuevoUrlAudio;
 	let nuevoUrlData;
 	let urlCargada = $('#video-exc').val();
 	let urlDestino = urlCargada.indexOf("https");
@@ -641,7 +642,17 @@ function createListaArrayExcursion(){
 	nuevoUrlData = urlCargada;
 	//$('#videoExcursionCargar').attr('src', urlCargada);
 }
-  //console.log(lastPositionArrayExcursion);
+	
+	
+	let usuarioAudio = $('#actividad-exc').val();
+  //let usuarioIndexAudio = usuarioAudio.indexOf(patronAudio);
+  let patronAudio = new RegExp(/C:\\fakepath\\/i, "" );
+  //'C:\fakepath\';
+  let nuevoPatronAudio = "../audio/";
+  usuarioAudio = usuarioAudio.replace(patronAudio, nuevoPatronAudio);
+  nuevoUrlAudio = usuarioAudio;	
+	
+  //console.log(lastPositionArrayExcursion);$('#actividad-exc').val()
   let datosNuevaExcursion = {
       "id":lastPositionArrayExcursion+1,
       "titulo":$('#titulo-exc').val(),
@@ -649,7 +660,7 @@ function createListaArrayExcursion(){
       "descripcion":$('#descripcion-exc').val(),
       "creditos":$('#creditos-exc').val(),
       "urlVideo":nuevoUrlData,
-      "audioActividad":$('#actividad-exc').val(),
+      "audioActividad":nuevoUrlAudio,
       "opciones":[],
       "respuestaActividad":$('#respuesta-exc').val(),
       "respuestaUsuario":""
