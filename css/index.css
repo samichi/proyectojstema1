@@ -528,7 +528,7 @@ p{
   background-repeat: no-repeat;
 }
 .pantalla .imagen .imagen-1 {
-  background-image: url("../image/pantallaPrincipal.png"); 
+  background-image: url(../image/pantallaPrincipal.png); 
 }
 
 .pantalla .imagen .imagen-2{
@@ -538,7 +538,7 @@ p{
   background-repeat: no-repeat;
 }
 .pantalla .imagen .imagen-2 {
-  background-image: url("../image/fondoRegistro.png"); 
+  background-image: url(../image/fondoRegistro.png); 
 }
 
 .pantalla .imagen .imagen-3{
@@ -548,7 +548,7 @@ p{
   background-repeat: no-repeat;
 }
 .pantalla .imagen .imagen-3 {
-  background-image: url("../image/fondoMenus.png"); 
+  background-image: url(../image/fondoMenus.png); 
 }
 .pantalla .imagen .imagen-incorrecto{
   height: 100vh;
@@ -557,7 +557,7 @@ p{
   background-repeat: no-repeat;
 }
 .pantalla .imagen .imagen-incorrecto {
-  background-image: url("../image/incorrecto.png"); 
+  background-image: url(../image/incorrecto.png); 
 }
 .pantalla .imagen .imagen-correcto{
   height: 100vh;
@@ -566,7 +566,7 @@ p{
   background-repeat: no-repeat;
 }
 .pantalla .imagen .imagen-correcto {
-  background-image: url("../image/correcto.png"); 
+  background-image: url(../image/correcto.png); 
 }
 @media screen and (min-width: 12000px){
     .hero-centro { width: 1400px; }  
