@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ChuChu TV Game</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    
+<!--                                                         PANTALLA PRINCIPAL--> 
+    <div id="chuChuTvPantalla"  class="pantalla" >
+      <div class="imagen">
+        <div class="imagen-1"></div>
+        <div class="hero-centro">   
+          <button type="button" id="btnLoginGeneral" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+            <img class="ima" src="image/login.png" alt="Smiley">
+          </button>
+        </div>
+      </div>
+    </div>
+    
+<!--                                                         PANTALLA INICIAR SESION-->          
+    <div id="usuarioLoginPantalla" class="pantalla">
+      <div class="superior">
+        <img class="img" src="image/superior.png" alt="Smiley face">
+      </div>
+      <div class="hero-der-arriba1">  
+        <button type="button" id="btnUsuarioSalirJuego" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+          <img class="ima" src="image/atras.png" alt="Smiley">
+        </button>   
+      </div> 
+      <div class="imagen">
+        <div class="imagen-2"></div>
+        <div class="hero-centro2">
+          <form class="form1">
+            <hgroup>
+              <h2>INICIAR SESION</h2>
+            </hgroup>
+            <div class="input-container">
+              <input id="usuarioLoginNombre" class="input-field" type="text" placeholder="Username" name="usrnm">
+            </div>    
+            <div class="input-container">
+              <input id="usuarioLoginClave" class="input-field" type="password" placeholder="Password" name="psw">
+            </div>
+          </form>            
+          <br><br><br><br><br><br>
+          <div class="hero-centro">
+            <button type="button" id="btnAccederUsuario" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+              <img class="ima" src="image/login.png" alt="Smiley">
+            </button>
+          </div>   
+        </div>
+      </div>
+      <div class="inferior">
+        <img class="img" src="image/inferior.png" alt="Smiley face">
+      </div>
+    </div>
+    
+<!--                                                         PANTALLA DE REGISTRO--> 
+    <div id="usuarioRegistroPantalla" class=" class="pantalla"">
+      <div class="superior">
+        <img class="img" src="image/superior.png" alt="Smiley face">
+      </div>
+      <div class="hero-der-arriba1">        
+        <button type="button" id="btnNuevoUsuarioSalirJuego"  class="btn btn-hero btn-lg" role="button">
+          <span class="circle-boton2">
+            <i class="fa fa-reply" style="margin: 13px auto;" aria-hidden="true" style="font-size: 20px;"></i>
+          </span>
+        </button>
+      </div>
+      <div class="imagen">
+        <div class="hero-centro2">
+          <div class="imagen-2"></div>
+          <form class="form1">
+            <hgroup>
+              <h2>REGISTRO</h2>
+            </hgroup>
+            <div class="input-container">
+              <input type="text" id="usuarioRegistroNombre" class="input-field" type="text" placeholder="Username" name="usrnm">
+            </div>    
+            <div class="input-container">
+              <input id="usuarioRegistroClave" class="input-field" type="password" placeholder="Password" name="psw">
+            </div>
+          </form>            
+          <br><br><br><br><br><br><br><br>
+          <div class="hero-centro">
+            <button type="button" id="btnGuardarUsuario" class="btn btn-hero btn-lg" role="button">
+              <span class="circle-boton">
+                <i class="fa fa1 fa-sign-in" aria-hidden="true" style="font-size: 20px;"></i>
+              </span>
+              <span class="pulse-boton"></span>
+            </button>
+          </div>   
+        </div>
+      </div>
+      <div class="inferior">
+        <img class="img" src="image/inferior.png" alt="Smiley face">
+      </div>
+    </div>
+      
+ <!--                                                         PANTALLA DE xxx-->      
+
+    <div id="juegoMenuPrincipal" class="pantalla">
+      <div class="imagen">
+        <div class="imagen-3"></div>
+        <div class="hero-der-arriba1"> 
+          <button type="button" id="btnMenuPrincipalRegresar" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+            <img class="ima" src="image/atras.png" alt="Smiley">
+          </button>  
+        </div>
+        <div class="hero-izq-abajo">       
+          <button type="button" id="btnJuegoVerExcursiones" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+            <img class="ima" src="image/editar-lista.png" alt="Smiley">
+          </button>  
+        </div>
+        <div class="hero-centro-boton">   
+          <button type="button" id="btnJuegoListaExcursiones" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+            <img class="ima" src="image/lista.png" alt="Smiley">
+          </button> 
+        </div>
+       </div> 
+    </div>
+    
+ <!--           MIRAR                                              PANTALLA DE LISTA DE EXCURSIONES-->       
+
+      
+
+    <div id="listaExcursiones" class="pantalla">     
+      <div class="imagen">
+        <div class="imagen-2"></div>
+        <div class="hero-centro2">    
+          <h2>LISTA DE ACTIVIDADES</h2>    
+          <div id="tablaUsuarioExcursiones" >
+          </div>
+        </div>
+      </div>
+      <div class="hero-der-arriba1">   
+        <button type="button" id="btnCerrarExcursionesMenuUsuario" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+          <img class="ima" src="image/atras.png" alt="Smiley">
+        </button>   
+      </div>  
+      <div class="superior">
+        <img class="img" src="image/superior.png" alt="Smiley face">
+      </div>
+      <div class="inferior">
+        <img class="img" src="image/inferior.png" alt="Smiley face">
+      </div>
+    </div>
+    
+    
+    
+     
+    <div id="juegoExcursion" class="listaMenu">
+      <div id="descripcionExcursion" class="pantalla" >
+        <div class="hero-der-abajo11"> 
+          <button type="button" id="irActividadExcursion" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+            <img class="ima" class="ima" src="image/siguiente.png" alt="Smiley">
+          </button> 
+        </div>     
+        <div class="imagen">
+          <div class="imagen-2"></div>  
+          <div class="hero-centro3">
+            <div id="videoExcursion" class="videoExcursion">
+		          <iframe id="videoExcursionCargar" class="video" allowfullscreen="true" allowscriptaccess="always" frameborder="0"></iframe>	    
+            </div>
+            <hgroup>
+              <h2 id="tituloExcursion"></h2>            
+              <div class="descrip">
+                <h3>DESCRIPCION</h3>
+                <p id="descripcionExcursionSeleccionada"></p>
+              </div>  
+              <div class="credi">
+                <h3>CREDITOS</h3>
+                <p id="creditosExcursionSeleccionada"></p>
+              </div> 
+            </hgroup> 
+          </div>
+        </div>
+        <div class="superior">
+          <img class="img" src="image/superior.png" alt="Smiley face">
+        </div>
+        <div class="inferior">
+          <img class="img" src="image/inferior.png" alt="Smiley face">
+        </div> 
+      </div>
+        
+<!--                                              AQUI-->    
+  <!--                                                         PANTALLA DE PRUEBA-->      
+
+ <!--              sdsdsdfsdfsdf                                           PANTALLA DE PRUEBA-->  
+        
+      <div id="actividadExcursion" class="pantalla">
+          
+        <div class="imagen">
+          <div class="imagen-2"></div> 
+          <div class="hero-centro22">
+              <button type="button" class="responsive gallery boton-act-estilo botoncito" id="btnPrimeraOpcionAct">
+                <img id="imgPrimeraOpcion" class="imga" src="" alt="imgPrimeraOpcion" width="400" height="267">
+              </button>
+              <button type="button" class="responsive gallery boton-act-estilo botoncito" id="btnSegundaOpcionAct">
+                <img id="imgSegundaOpcion" class="imga" src="" alt="imgSegundaOpcion" width="400" height="267">
+              </button>
+              <button type="button" class="responsive gallery boton-act-estilo botoncito" id="btnTerceraOpcionAct">
+                <img id="imgTerceraOpcion" class="imga" src="" alt="imgTerceraOpcion" width="400" height="267">
+              </button>
+          </div>          
+        </div>  
+        <div class="hero-der-arriba1">   
+            <button type="button" id="btnRegresarActividadExcursion" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+              <img class="ima" src="image/atras.png" alt="Smiley">
+            </button>   
+          </div>  
+          <div class="hero-der-abajo11">     
+            <button type="button" id="verRespuestaActividad" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+              <img class="ima" src="image/respuesta.png" alt="Smiley">
+            </button>     
+          </div>  
+      </div>
+        <div class="superior">
+          <img class="img" src="image/superior.png" alt="Smiley face">
+        </div>
+        <div class="inferior">
+          <img class="img" src="image/inferior.png" alt="Smiley face">
+        </div>       
+    </div>
+    
+    <!--asdasd-->
+    
+
+    <div id="respuestaActividadJuego" class="pantalla">
+      <div type="button" class="imagen">
+        <div id="respuestaCorrectaUsuarioJuego" class="imagen-correcto" alt="Respuesta Correcta del Usuario"></div> 
+        <div id="respuestaErroneaUsuarioJuego" class="imagen-incorrecto" alt="Respuesta Incorrecta del Usuario"></div>           
+        <div class="hero-der-arriba1">  
+          <button type="button" id="btnCerrarPopUp" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+            <img class="ima" class="ima" src="image/atras.png" alt="Smiley">
+          </button> 
+        </div>    
+      </div>      
+    </div>
+
+    
+    <!--MIRAR AQUI-->
+
+
+
+    <div id="verRespuestaCorrectaDiv" class="pantalla">    
+
+        <div class="superior">
+          <img class="img" src="image/superior.png" alt="Smiley face">
+        </div>
+        <div class="inferior">
+          <img class="img" src="image/inferior.png" alt="Smiley face">
+        </div>       
+      <div class="imagen">
+          <div class="hero-der-arriba1">     
+            <button type="button" id="btnCerrarRespuestaCorrectaDiv" class="btn warning w3-button w3-circle w3-black ima"  role="button">
+              <img class="ima" src="image/atras.png" alt="Smiley">
+            </button>    
+          </div>      
+        <div class="imagen-2"></div>
+        <div class="hero-centro-boton">    
+          <img id="verRespuestaCorrectaActividad" src="" style="width:30%;" alt="Respuesta Correcta de la Actividad">              
+        </div>
+      </div>      
+    </div>
+    
+    
+
+    <div id="adminExcursionesCRUD">
+      <div id="readListaExcursiones">
+        <h2>SECCION ADMINISTRADOR</h2>
+        <table id="tablaAdminExcursiones">
+          <thead>
+            <th>Titulo</th>
+            <th>Portada</th>
+            <th>Descripcion</th>
+            <th>UrlVideo</th>
+            <th>Creditos</th>
+            <th>Audio Actividad</th>
+            <th>Opcion Url 1</th>
+            <th>Opcion Url 2</th>
+            <th>Opcion Url 3</th>
+            <th>Respuesta Actividad</th>
+            <th>Boton Editar</th>
+            <th>Boton Eliminar</th>
+          </thead>
+          <tbody id="contenidoTablaAdminExcursiones"></tbody>
+        </table>
+        <br><br><br><br>
+        <button type="button" id="btnCrearNuevaExcursion">Crear Excursion</button>
+        <button type="button" onclick="exportJSON()" id="btnDescargarJSON">Descargar JSON</button>
+        <button type="button" id="btnAdminRegresarMenu">Regresar Menu</button>
+      </div>
+      
+        
+      <div id="createExcursion">
+           <div class="fondoAudio"> </div>
+        <form id="excursion" class='formulario'>
+          <h2>Crear Excursión</h2><br>
+          <div class="input-containerAdmin">
+            <i class="fa fa-user icon"></i>
+            <input id="titulo-exc" type="text" placeholder="Titulo">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-book icon"></i>
+            <input id="portada-exc" type="text" placeholder="Url Portada">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-video-camera icon"></i>
+            <input id="video-exc" type="text" placeholder="Video Url de Youtube">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-file-text icon"></i>
+            <input id="descripcion-exc" type="text" placeholder="Descripción">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-at icon"></i>
+            <input id="creditos-exc" type="text" placeholder="Creditos">
+          </div>
+          <!--<div class="input-containerAdmin">
+            <i class="fa fa-edit icon"></i>
+            <input id="actividad-exc" type="text" placeholder="Url Audio (Ex: https://kahimyang.com/resources/sound/click.mp3)">
+          </div>-->
+          
+          <div class="input-containerAdmin">
+            <i class="fa fa-edit icon"></i>
+            <input id="actividad-exc" type="file" placeholder="Actividad (Audio mp3)" name="archivo">
+            <input type="button" class="AgregarAudio" value="Agregar Audios" /><br />
+          </div>
+          
+          <div class="fondoAudio"> </div>
+        
+          <div class="input-containerAdmin">
+            <i class="fa fa-book icon"></i>
+            <input id="opcion1-exc" type="text" placeholder="Url Opcion Imagen 1">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-book icon"></i>
+            <input id="opcion2-exc" type="text" placeholder="Url Opcion Imagen 2">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-book icon"></i>
+            <input id="opcion3-exc" type="text" placeholder="Url Opcion Imagen 3">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-check icon"></i>
+            <input id="respuesta-exc" type="text" placeholder="Url Opcion Respuesta">
+          </div>
+          <br><br>
+          <button type="button" id="btnGuardarNuevaExcursion" class="btnGuardar">Guardar</button> <br><br>
+          <button type="button" id="btnRegresarCRUDAdmin" class="btnGuardar">Regresar al Menu Administrador</button>
+        </form>
+      </div>
+      
+      <div id="editExcursion">
+        <form id="excursion1" class="formulario">
+          <h2>Editar Excursión</h2><br>
+          <div class="input-containerAdmin">
+            <i class="fa fa-user icon"></i>
+            <input id="titulo-exc2" type="text" placeholder="Titulo">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-book icon"></i>
+            <input id="portada-exc2" type="text" placeholder="Url Portada">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-video-camera icon"></i>
+            <input id="video-exc2" type="text" placeholder="Video Url de Youtube">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-file-text icon"></i>
+            <input id="descripcion-exc2" type="text" placeholder="Descripción">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-at icon"></i>
+            <input id="creditos-exc2" type="text" placeholder="Creditos">
+          </div>
+          <!--<div class="input-containerAdmin">
+            <i class="fa fa-edit icon"></i>
+            <input id="actividad-exc2" type="text" placeholder="Url Audio (Ex: https://kahimyang.com/resources/sound/click.mp3)">
+          </div>-->
+          <div class="input-containerAdmin">
+            <i class="fa fa-edit icon"></i>
+            <input id="actividad-exc2" type="file" placeholder="Actividad (audio mp3)">
+           <input type="button" class="AgregarAudio" value="Subir audio" />
+         </div>
+         
+          <div class="fondoAudio"> </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-book icon"></i>
+            <input id="opcion1-exc2" type="text" placeholder="Url Opcion Imagen 1">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-book icon"></i>
+            <input id="opcion2-exc2" type="text" placeholder="Url Opcion Imagen 2">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-book icon"></i>
+            <input id="opcion3-exc2" type="text" placeholder="Url Opcion Imagen 3">
+          </div>
+          <div class="input-containerAdmin">
+            <i class="fa fa-check icon"></i>
+            <input id="respuesta-exc2" type="text" placeholder="Url Opcion Respuesta">
+          </div>
+          <button type="button" id="btnEditarExcursionAdmin" class="btnGuardar">Guardar Excursion</button> <br><br>
+          <button type="button" id="btnEditarRegresarCRUDAdmin" class="btnGuardar">Regresar al Menu Administrador</button>
+        </form>
+      </div>
+      
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
