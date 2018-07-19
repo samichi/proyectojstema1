@@ -1,4 +1,4 @@
-var dataParse = JSON.parse('{"usuarios":[{"id":1, "usuario":"Jenny","clave":"1234", "excursiones":[{"id":1, "titulo":"Animales", "portada":"./image/portadaAnimales.jpg", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ftNOCfqoIjQ", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"./image/vaca.png"},{"imgUrl":"./image/oveja.png"},{"imgUrl":"./image/caballo.png"}], "respuestaActividad":"./image/vaca.png", "respuestaUsuario":""},{"id":2, "titulo":"Frutas", "portada":"./image/portadaFrutas.jpg", "descripcion":"Muestra como identificar las frutas", "creditos":"ChuChuTv Y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=kvC4_HBOnI0", "audioActividad":"./audio/actividadFruta.mp3","opciones":[{"imgUrl":"./image/banano.png"},{"imgUrl":"./image/manzanas.png"},{"imgUrl":"./image/naranjas.png"}], "respuestaActividad":"./image/banano.png", "respuestaUsuario":""}]}, {"id":2, "usuario":"Meche","clave":"1234", "excursiones":[{"id":1, "titulo":"Animales", "portada":"./image/portadaAnimales.jpg", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ftNOCfqoIjQ", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"./image/vaca.png"},{"imgUrl":"./image/oveja.png"},{"imgUrl":"./image/caballo.png"}], "respuestaActividad":"./image/vaca.png", "respuestaUsuario":""}]}]}');
+var dataParse = JSON.parse('{"usuarios":[{"id":1, "usuario":"Jenny","clave":"1234", "excursiones":[{"id":1, "titulo":"Animales", "portada":"./image/portadaAnimales.jpg", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ftNOCfqoIjQ", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"./image/vaca.png"},{"imgUrl":"./image/oveja.png"},{"imgUrl":"./image/caballo.png"}], "respuestaActividad":"./image/vaca.png", "respuestaUsuario":""},{"id":2, "titulo":"Frutas", "portada":"./image/portadaFrutas.jpg", "descripcion":"Muestra como identificar las frutas", "creditos":"ChuChuTv Y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=kvC4_HBOnI0", "audioActividad":"./audio/actividadFruta.mp3","opciones":[{"imgUrl":"./image/banano.png"},{"imgUrl":"./image/manzanas.png"},{"imgUrl":"./image/naranjas.png"}], "respuestaActividad":"./image/banano.png", "respuestaUsuario":""}]}, {"id":2, "usuario":"admin","clave":"1234", "excursiones":[{"id":1, "titulo":"Animales", "portada":"./image/portadaAnimales.jpg", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ftNOCfqoIjQ", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"./image/vaca.png"},{"imgUrl":"./image/oveja.png"},{"imgUrl":"./image/caballo.png"}], "respuestaActividad":"./image/vaca.png", "respuestaUsuario":""}]}]}');
 
 var listaExcursion = JSON.parse('{"excursiones":[{"id":1, "titulo":"Animales", "portada":"./image/portadaAnimales.jpg", "descripcion":"Muestra los sonidos de los animales de la granja", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=6qyKtYGILNA", "audioActividad":"./audio/actividadAnimal.mp3", "opciones":[{"imgUrl":"./image/vaca.png"},{"imgUrl":"./image/oveja.png"},{"imgUrl":"./image/caballo.png"}], "respuestaActividad":"./image/vaca.png", "respuestaUsuario":""},{"id":2, "titulo":"Frutas", "portada":"./image/portadaFrutas.jpg", "descripcion":"Muestra como identificar las frutas", "creditos":"ChuChuTv Y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=ro4Rvp4Kc3s", "audioActividad":"./audio/actividadFruta.mp3","opciones":[{"imgUrl":"./image/banano.png"},{"imgUrl":"./image/manzanas.png"},{"imgUrl":"./image/naranjas.png"}], "respuestaActividad":"./image/banano.png", "respuestaUsuario":""},{"id":3,"titulo":"Numeros", "portada":"./image/portadaNumeros.jpg", "descripcion":"Muestra como contar del numero uno al numero cinco", "creditos":"ChuChuTv y GrupoJIM", "urlVideo":"https://www.youtube.com/watch?v=Isw1-oCe3N8", "audioActividad":"./audio/juegoTercero.mp3", "opciones":[{"imgUrl":"./image/uno.png"},{"imgUrl":"./image/dos.png"},{"imgUrl":"./image/tres.png"}], "respuestaActividad":"./image/dos.png", "respuestaUsuario":""}]}');
 
@@ -59,7 +59,47 @@ $ ( '#btnLoginGeneral' ).click(function(){
 $( '#btnAccederUsuario' ).click(function(){
   usuarioEnUso = $( '#usuarioLoginNombre' ).val();
   claveEnUSo = $( '#usuarioLoginClave' ).val();
-  if(usuarioEnUso  == "admin" &&  claveEnUSo == "1234"){
+  
+    
+    for (const item of Object.values(usuariosArray)){
+        if(usuarioEnUso  == "admin" &&  claveEnUSo == "1234" && usuarioEnUso == item.usuario && claveEnUSo == item.clave){
+              idUsuario = item.id;
+            $( '#usuarioLoginPantalla' ).hide();
+            $( '#juegoMenuPrincipal' ).show(); //Pantalla boton lista Excursiones
+              $( '#btnJuegoVerExcursiones' ).show();
+        }
+      else {
+	      /*
+          if(usuarioEnUso == item.usuario && claveEnUSo == item.clave && usuarioEnUso  != "admin" &&  claveEnUSo != "1234"){
+        idUsuario = item.id;
+        //console.log(idUsuario);
+        $( '#usuarioLoginPantalla' ).hide();
+        $( '#juegoMenuPrincipal' ).show(); //Pantalla boton lista Excursiones
+        $( '#btnJuegoVerExcursiones' ).hide();
+      } else {
+         
+            //alert("Usuario y contraseña invalidos. Ingrese de nuevo...");
+            $( '#usuarioLoginNombre' ).val("");
+            $( '#usuarioLoginClave' ).val("");
+        
+      }
+      */
+	     $( '#usuarioLoginNombre' ).val("");
+            $( '#usuarioLoginClave' ).val("");
+    }
+    }
+    
+    /*
+    if(usuarioEnUso  == "admin" &&  claveEnUSo == "1234"){
+    $( '#usuarioLoginPantalla' ).hide();
+    $( '#juegoMenuPrincipal' ).show(); //Pantalla boton lista Excursiones
+  } else {
+    
+  }
+    
+    
+    
+    if(usuarioEnUso  == "admin" &&  claveEnUSo == "1234"){
     $( '#usuarioLoginPantalla' ).hide();
     $( '#juegoMenuPrincipal' ).show(); //Pantalla boton lista Excursiones
   } else {
@@ -76,7 +116,7 @@ $( '#btnAccederUsuario' ).click(function(){
         $( '#usuarioLoginClave' ).val("");
       }
     }
-  }
+  }*/
   /*
   for (const item of Object.values(usuariosArray)){
     if (usuarioEnUso == item.usuario && claveEnUSo == item.clave){
