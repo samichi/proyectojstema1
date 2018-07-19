@@ -1,4 +1,21 @@
+/*-----------------------------------------------BOTONES-------------------------------*/
+.w3-circle{border-radius:50%}
+.w3-black,.w3-hover-black:hover{color:rgb(68, 47, 47)!important;background-color:rgb(247, 243, 243);}
+.w3-button{border:none;cursor:pointer;}
+.btn {
+  background-color: #D87805;
+  color: white;
+  padding:10px auto;
+  cursor: pointer;
+  border-radius:50%;
+}
 
+
+.warning:hover {
+  background: white;
+  color: white;
+}
+/*--------------------------------------------------------------*/
 /*INICIO CSS BOTON*/
 
 .container-boton {
@@ -170,7 +187,7 @@
    top:8px;
 }
 .input-container {
-  background-color:#eae1ef!important;
+  background-color:white!important;
     color:#615d63!important;
     display: -ms-flexbox; /* IE10 */
     display: flex;
@@ -179,7 +196,7 @@
     text-align: center;
 }
 .input-field {
-  background-color:#eae1ef!important;
+  background-color:white!important;
     color:#615d63!important;
     width: 100%;
     padding: 10px;
@@ -188,11 +205,11 @@
 
 .input-field:focus {
     border: 2px solid #8f66a3!important;
-    background-color:#eae1ef !important;
+    background-color:white !important;
     color:#615d63;
 }
 .input-container {
-  background-color:#eae1ef !important;
+  background-color:white !important;
     color:#615d63 !important;
     display: -ms-flexbox; /* IE10 */
     display: flex;
@@ -200,29 +217,51 @@
     margin-bottom: 15px;
     text-align: center;
 }
-.responsive {
-    padding: 0 6px;
-    width: 24.99999%;
-    display: inline-block;
-}
-div.gallery {
-    border: 1px solid #ccc;
+.videoExcursion{
+  width:100%;
 }
 .botoncito{
     background-color: #b8a0c4;
     color: #fff!important;
 }
+.gallery {
+    border: 1px solid #ccc;
+}
 
-div.gallery:hover {
+.gallery:hover {
     border: 1px solid #777;
 }
-div .gallery img {
+.gallery img {
     width: 100%;
     height: auto;
 }
-div .gallery .imga {
-    width: 50%;
-    height: auto;
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+    .ima{
+      width: 80%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
 }
 .rowx:after {
     content: "";
@@ -270,15 +309,56 @@ div .gallery .imga {
            -o-transform: translate3d(-50%,-50%,0);
               transform: translate3d(-50%,-50%,0);
 }
-.hero-centro2 {
+.hero-centro22 {
+    width: 90%;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     z-index: 3;
-    color: #422f5d-;
+    color: #fff;
     text-align: center;
     text-transform: uppercase;
     text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero-centro-boton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+h2 h3{
+  font-family: "Comic Sans MS";
+  text-align: center;
+    text-transform: uppercase;
+}
+p{
+  font-family: "Comic Sans MS";
+  text-align: center;
+}
+.hero-centro2 {
+    position: absolute;
+    font-family: "Comic Sans MS";
+    top: 50%;
+    width:80%;
+    left: 50%;
+    z-index: 3;
+    color: #4B4B4C;
+    text-align: center;
+    text-transform: uppercase;
       -webkit-transform: translate3d(-50%,-50%,0);
          -moz-transform: translate3d(-50%,-50%,0);
           -ms-transform: translate3d(-50%,-50%,0);
@@ -363,8 +443,24 @@ div .gallery .imga {
 .hero-der-arriba1 {
   margin: 13px 13px 13px 13px;
     position: absolute;
-    top: 10%;
-    right: 15%;
+    top: 5%;
+    right: 0%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-5%,-5%,0);
+         -moz-transform: translate3d(-5%,-5%,0);
+          -ms-transform: translate3d(-5%,-5%,0);
+           -o-transform: translate3d(-5%,-5%,0);
+              transform: translate3d(-5%,-5%,0);
+}
+ .hero-der-abajo11  {
+  margin: 13px 13px 13px 13px;
+    position: absolute;
+    top: 80%;
+    right: 0%;
     z-index: 3;
     color: #fff;
     text-align: center;
@@ -424,14 +520,7 @@ div .gallery .imga {
            -o-transform: translate3d(-5%,-5%,0);
               transform: translate3d(-5%,-5%,0);
 }
-.btn.btn-lg {padding: 1px 1px;}
-.btn.btn-hero,
-.btn.btn-hero:hover,
-.btn.btn-hero:focus {
-    color: #f5f5f5;
-    outline: none;
-    margin: 20px auto;
-}
+
 .pantalla .imagen .imagen-1{
   height: 100vh;
   background-size: cover;
@@ -461,8 +550,25 @@ div .gallery .imga {
 .pantalla .imagen .imagen-3 {
   background-image: url(https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/fondoMenus.png); 
 }
-
-@media screen and (min-width: 1900px){
+.pantalla .imagen .imagen-incorrecto{
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.pantalla .imagen .imagen-incorrecto {
+  background-image: url(https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/incorrecto.png); 
+}
+.pantalla .imagen .imagen-correcto{
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.pantalla .imagen .imagen-correcto {
+  background-image: url(https://chuchu-integrated-sitio-cloned-samichi.c9users.io/image/correcto.png); 
+}
+@media screen and (min-width: 12000px){
     .hero-centro { width: 1400px; }  
     .hero-centro2 { width: 1400px; }  
     .hero-centro3 { width: 1400px; }  
@@ -474,6 +580,8 @@ div .gallery .imga {
     .hero-der-arriba2 { width: 1400px; }
     .hero-der-arriba5 { width: 1400px; }
     .hero-der-abajo5 { width: 1400px; }
+    .hero-centro-boton { width: 1400px; }
+    .hero-centro22 { width: 1400px; }
     
 }
 
@@ -491,7 +599,8 @@ div .gallery .imga {
 .video {
         float:none;
 	      text-align:center;
-				width: 50%;
+				width: 100%;
+				height: 100%;
 			}
             
 .btnControles{
@@ -565,6 +674,7 @@ div .gallery .imga {
           background-color: #8807ff;
           opacity: 0.60;
       }
+
 
 /*---------------------------------------------------------------------------------------------------------------*/
 
@@ -659,3 +769,29 @@ table, th, td {
     color: white;
 }
 
+.btnExcursionActividad{
+  background-color: white;
+    color: black;
+    border: 2px solid #ff9000;
+    padding: 32px 16px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.btnExcursionActividad:hover {
+    border: 5px solid #ff9000;
+    font-weight: bold;
+}
+.portadaExcursionJuego{
+  height: 150px;
+}
+.gallery2 {
+    border: 0px solid #ccc;
+}
+
+.gallery2:hover {
+    border: 0px solid #777;
+}
+.gallery2 img {
+    width: 100%;
+    height: auto;
+}
