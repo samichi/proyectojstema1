@@ -643,14 +643,16 @@ function createListaArrayExcursion(){
 	//$('#videoExcursionCargar').attr('src', urlCargada);
 }
 	
-	
-	let usuarioAudio = $('#actividad-exc').val();
+	/*
+let usuarioAudio = $('#actividad-exc').val();
+  usuarioAudio = usuarioAudio.replace('C:\\fakepath\\', '');
   //let usuarioIndexAudio = usuarioAudio.indexOf(patronAudio);
-  let patronAudio = new RegExp(/C:\\fakepath\\/i, "" );
+  //let patronAudio = new RegExp(/C:\\fakepath\\/i, "" );
   //'C:\fakepath\';
-  let nuevoPatronAudio = "../audio/";
-  usuarioAudio = usuarioAudio.replace(patronAudio, nuevoPatronAudio);
+  let nuevoPatronAudio = "../audio/"  + usuarioAudio;
+  usuarioAudio = usuarioAudio.replace(usu, nuevoPatronAudio);
   nuevoUrlAudio = usuarioAudio;	
+  */
 	
   //console.log(lastPositionArrayExcursion);$('#actividad-exc').val()
   let datosNuevaExcursion = {
@@ -659,7 +661,7 @@ function createListaArrayExcursion(){
       "portada":$('#portada-exc').val(),
       "descripcion":$('#descripcion-exc').val(),
       "creditos":$('#creditos-exc').val(),
-      "urlVideo":nuevoUrlData,
+      "urlVideo":$('#actividad-exc').val(),
       "audioActividad":nuevoUrlAudio,
       "opciones":[],
       "respuestaActividad":$('#respuesta-exc').val(),
