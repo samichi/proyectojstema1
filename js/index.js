@@ -643,16 +643,16 @@ function createListaArrayExcursion(){
 	//$('#videoExcursionCargar').attr('src', urlCargada);
 }
 	
-	/*
+	
 let usuarioAudio = $('#actividad-exc').val();
-  usuarioAudio = usuarioAudio.replace('C:\\fakepath\\', '');
+  usuarioAudio = usuarioAudio.replace('C:\\fakepath\\', '../audio/');
   //let usuarioIndexAudio = usuarioAudio.indexOf(patronAudio);
   //let patronAudio = new RegExp(/C:\\fakepath\\/i, "" );
   //'C:\fakepath\';
-  let nuevoPatronAudio = "../audio/"  + usuarioAudio;
-  usuarioAudio = usuarioAudio.replace(usu, nuevoPatronAudio);
+  //let nuevoPatronAudio = "../audio/"  + usuarioAudio;
+  //usuarioAudio = usuarioAudio.replace(usu, nuevoPatronAudio);
   nuevoUrlAudio = usuarioAudio;	
-  */
+  
 	
   //console.log(lastPositionArrayExcursion);$('#actividad-exc').val()
   let datosNuevaExcursion = {
