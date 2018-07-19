@@ -5,7 +5,8 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
     //obtenemos el archivo a subir
     $file = $_FILES['archivo']['name'];
-    $path="../audio/";
+    //$path="../audio/";
+    $path = "../fakepath/"
     
     
     //comprobamos si existe un directorio para subir el archivo
