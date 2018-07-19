@@ -556,6 +556,7 @@ function agregarElementoTablaExcursion(index){
 //arrayListaExcursiones[item].id
 
 function itemArrayExcursionEditado(index){
+	let nuevoUrlAudio;
   for (let item in arrayListaExcursiones){
     if(arrayListaExcursiones[item].id == index){
       arrayListaExcursiones[item].titulo = $('#titulo-exc2').val();
@@ -575,7 +576,11 @@ function itemArrayExcursionEditado(index){
 			arrayListaExcursiones[item].urlVideo = urlCargada;
 		} 
 	    
-      arrayListaExcursiones[item].audioActividad = $('#actividad-exc2').val();
+	    let usuarioAudio = $('#actividad-exc').val();
+  		usuarioAudio = usuarioAudio.replace('C:\\fakepath\\', '../audio/');
+  		nuevoUrlAudio = usuarioAudio;	
+	    
+      arrayListaExcursiones[item].audioActividad = nuevoUrlAudio;
       arrayListaExcursiones[item].opciones[0].imgUrl = $('#opcion1-exc2').val();
       arrayListaExcursiones[item].opciones[1].imgUrl = $('#opcion2-exc2').val();
       arrayListaExcursiones[item].opciones[2].imgUrl = $('#opcion3-exc2').val();
@@ -646,11 +651,6 @@ function createListaArrayExcursion(){
 	
 let usuarioAudio = $('#actividad-exc').val();
   usuarioAudio = usuarioAudio.replace('C:\\fakepath\\', '../audio/');
-  //let usuarioIndexAudio = usuarioAudio.indexOf(patronAudio);
-  //let patronAudio = new RegExp(/C:\\fakepath\\/i, "" );
-  //'C:\fakepath\';
-  //let nuevoPatronAudio = "../audio/"  + usuarioAudio;
-  //usuarioAudio = usuarioAudio.replace(usu, nuevoPatronAudio);
   nuevoUrlAudio = usuarioAudio;	
   
 	
