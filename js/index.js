@@ -576,7 +576,7 @@ function itemArrayExcursionEditado(index){
 			arrayListaExcursiones[item].urlVideo = urlCargada;
 		} 
 	    
-	    let usuarioAudio = $('#actividad-exc').val();
+	    let usuarioAudio = $('#actividad-exc2').val();
   		usuarioAudio = usuarioAudio.replace('C:\\fakepath\\', '../audio/');
   		nuevoUrlAudio = usuarioAudio;	
 	    
